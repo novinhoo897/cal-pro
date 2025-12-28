@@ -127,4 +127,56 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Garantir alto contraste em todos os textos */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground;
+    font-weight: 600;
+  }
+  
+  p, span, div {
+    @apply text-foreground;
+  }
+  
+  /* Garantir contraste em textos secundários */
+  .text-muted, .text-gray-500, .text-gray-600 {
+    @apply text-muted-foreground;
+  }
+  
+  /* Garantir contraste em modo escuro */
+  .dark .text-gray-900 {
+    @apply text-foreground;
+  }
+  
+  .dark .text-gray-800 {
+    @apply text-foreground;
+  }
+  
+  .dark .text-gray-700 {
+    @apply text-muted-foreground;
+  }
+  
+  /* Garantir contraste em botões */
+  button {
+    @apply transition-colors duration-200;
+  }
+  
+  /* Garantir legibilidade em cards */
+  .bg-white {
+    @apply text-gray-900;
+  }
+  
+  .dark .bg-gray-800 {
+    @apply text-gray-100;
+  }
+  
+  /* Garantir contraste em inputs */
+  input, textarea, select {
+    @apply text-foreground bg-background;
+  }
+  
+  /* Garantir contraste em links */
+  a {
+    @apply text-primary hover:text-primary/80;
+  }
 }
